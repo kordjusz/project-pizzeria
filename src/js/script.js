@@ -143,17 +143,15 @@
             if(optionImage){
               optionImage.classList.add(classNames.menuProduct.imageVisible);
             }
-            
-            if(option.price !== true){
+            if(option.defualt !== true){
               price += option.price;
-            } else {
-              if(option.price === true){
-                price -= option.price;
-              }
             }
           } else {
             if(optionImage){
               optionImage.classList.remove(classNames.menuProduct.imageVisible);
+            }
+            if(option.default === true){
+              price -= option.price;
             }
           }
         }
